@@ -18,7 +18,7 @@ var express          =require("express"),
     
    
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb+srv://gunjan:Gunjan1997@cluster0-xskbl.mongodb.net/yelpcamp?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://gunjan:Gunjan1997@cluster0-xskbl.mongodb.net/test?retryWrites=true&w=majority");
 app.use(bodyparser.urlencoded({encoded: false}));
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());  
@@ -54,6 +54,7 @@ app.use(function(req,res,next){
 app.use(indexRoutes); 
 app.use(campgroundRoutes);
 app.use(commentRoutes);
+
 
 
 app.listen(process.env.PORT||3000,process.env.IP);
